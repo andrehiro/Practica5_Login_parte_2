@@ -14,7 +14,7 @@ y agregamos ese codigo en el html:
    {% if messages %}
      <ul>
        {% for message in messages %}
-         <li class="alert alert-warning">{{ message }}</li>
+         .<li class="alert alert-warning">{{ message }}</li>
        {% endfor %}
      </ul>
    {% endif %}
