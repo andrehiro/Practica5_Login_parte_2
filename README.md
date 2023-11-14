@@ -5,11 +5,10 @@ Andre Alexander Hidrogo Rocha 13/11/2023 Segunda parte del login por medio de Fl
 Para mandar mensajes utilizaremos flash, para ello debemos agregar la variable sercret_key en el archivo config.py a la clase DevelopmentConfig.
 
 El mensaje flash lo agregaremos en la ruta /login con el siguiente comando:
-
+``` python
 flash("acceso rechazado")
-
+```
 y agregamos ese codigo en el html:
-
 ``` html 
 {% with messages = get_flashed_messages() %}
    {% if messages %}
@@ -19,7 +18,6 @@ y agregamos ese codigo en el html:
        {% endfor %}
      </ul>
    {% endif %}
-   
  {% endwith %}
 ````
 
