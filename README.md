@@ -10,17 +10,18 @@ flash("acceso rechazado")
 
 y agregamos ese codigo en el html:
 
+´´´ html 
 {% with messages = get_flashed_messages() %}
    {% if messages %}
      <ul>
        {% for message in messages %}
-         "<li class="alert alert-warning">{{ message }}</li>"
+         <li class="alert alert-warning">{{ message }}</li>
        {% endfor %}
      </ul>
    {% endif %}
    
  {% endwith %}
-
+´´´
 #### Creacion de la base de datos
 Para crear la base de datos simplemente ejecuta los comandos que estan en el script.sql y depues puedes agregar mas usuario si asi lo deseas.
 
