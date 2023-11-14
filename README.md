@@ -47,22 +47,22 @@ MYSQL_PASSWORD = "_Taller$2020.01BD"
 MYSQL_DB = "store"
 ```
 Tambien tendras que actualizae la ruta del login
-``` html
+``` python
 @app.route("/login", methods=["GET", "POST"])
 def login():
-if request.method == "POST":
-user = User(0, request.form['username'], request.form['password'],0)
-logged_user = ModelUsers.login(db, user)
-if logged_user != None:
-if logged_user.usertype == 1:
-return redirect(url_for("admin"))
-else:
-return redirect(url_for("home"))
-else:
-flash("Acceso rechazado...")
-return render_template("auth/login.html")
-else:
-return render_template("auth/login.html")
+   if request.method == "POST":
+      user = User(0, request.form['username'], request.form['password'],0)
+      logged_user = ModelUsers.login(db, user)
+      if logged_user != None:
+         if logged_user.usertype == 1:
+            return redirect(url_for("admin"))
+         else:
+            return redirect(url_for("home"))
+         else:
+            flash("Acceso rechazado...")
+            return render_template("auth/login.html")
+   else:
+      return render_template("auth/login.html")
 ```
 
 
